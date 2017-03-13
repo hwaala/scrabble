@@ -107,7 +107,7 @@ def main():
   """
   f = open('sowpods.txt', 'rU')
   dictionary = f.read()
-  
+  f.close()
   
   """
   The code to find all words from the word list that are made of letters that are a
