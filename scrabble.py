@@ -29,7 +29,7 @@ $ python scrabble.py ZAEFIEE
 """
 
 """
-
+Compares the sorted rack with the sorted hash and returns the matches
 """
 def get_rack_words(rack, hash):
     # if the string is empty, return an empty list
@@ -50,12 +50,12 @@ def get_rack_words(rack, hash):
     return words 
 
 
-"""
-
+"""    
+Create a "hash" for each word: its letters are sorted
+e.g. hash['back'] = 'adck'
 """
 def key_dictionary(dictionary):
     hash = {}
-    # create a "hash" for each word: its letters are sorted
     for word in dictionary.split('\n'):
         if re.match(r'\w+', word):
             key = ''.join(sorted(word))
@@ -65,7 +65,7 @@ def key_dictionary(dictionary):
     return hash
 
 """
-
+Scores the words that match and returns a dictionary
 """
 def score(matches):
   
